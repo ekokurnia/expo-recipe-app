@@ -91,7 +91,6 @@ const styles = StyleSheet.create({
   card: {
     width: 124,
     height: 191,
-    marginBottom: 90,
   },
   cardImage: {
     resizeMode: "contain",

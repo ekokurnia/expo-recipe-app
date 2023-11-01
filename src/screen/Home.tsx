@@ -8,6 +8,8 @@ import SearchField from "../component/SearchField";
 import Trending from "../component/home/Trending";
 import PopularCategory from "../component/home/PopularCategory";
 import Recent from "../component/home/Recent";
+import PopularCreator from "../component/home/PopularCreator";
+
 const Home = () => {
   return (
     <SafeAreaView>
@@ -35,6 +37,9 @@ const Home = () => {
         <PopularCategory />
         <HeightSpacer height={24} />
         <Recent />
+        <HeightSpacer height={24} />
+        <PopularCreator />
+        <HeightSpacer height={80} />
       </ScrollView>
     </SafeAreaView>
   );
