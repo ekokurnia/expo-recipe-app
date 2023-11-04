@@ -8,7 +8,13 @@ import Video from "./discover/Video";
 import Recipe from "./discover/Recipe";
 import { COLORS, SIZES } from "../constant/theme";
 
-const Tab = createMaterialTopTabNavigator();
+
+export type DiscoverParamsList = {
+   Video: undefined;
+   Recipe: undefined;
+};
+
+const Tab = createMaterialTopTabNavigator<DiscoverParamsList>();
 
 const TabBar = ({ state, descriptors, navigation, position }: MaterialTopTabBarProps) => {
    return (

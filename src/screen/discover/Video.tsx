@@ -1,9 +1,11 @@
-import { StyleSheet, Text, View, Image, FlatList } from "react-native";
+import { StyleSheet, Text, View, Image, FlatList, Pressable } from "react-native";
+import { useNavigation } from "@react-navigation/native";
+import { StackNavigationProp } from "@react-navigation/stack";
 import { Entypo } from "@expo/vector-icons";
 
+import { RootStackParamList } from "../../../type";
 import Styles from "../../component/reusable.style";
 import { COLORS, SIZES } from "../../constant/theme";
-import HeightSpacer from "../../component/HeightSpacer";
 
 const videoData = [
    {
@@ -29,17 +31,24 @@ const videoData = [
    },
 ];
 
+type VideoCardNavigationProps = StackNavigationProp<RootStackParamList, "VideoDetail">;
+
 const Video = () => {
+   const navigation = useNavigation<VideoCardNavigationProps>();
    return (
       <View style={[Styles.container, { paddingBottom: 100 }]}>
          {/* Video Card Scroll */}
          <FlatList
             data={videoData}
+            keyExtractor={(item) => item.id.toString()}
             showsVerticalScrollIndicator={false}
             contentContainerStyle={{ gap: 16 }}
             renderItem={({ item }) => (
                // Card
-               <View style={styles.card}>
+               <Pressable
+                  onPress={() => navigation.navigate("VideoDetail", item)}
+                  style={styles.card}
+               >
                   <View style={styles.imageContainer}>
                      <Image style={styles.image} source={item.image} />
                   </View>
@@ -57,7 +66,7 @@ const Video = () => {
                      </View>
                      <Text style={styles.authorName}>By {item.author}</Text>
                   </View>
-               </View>
+               </Pressable>
             )}
          />
       </View>
