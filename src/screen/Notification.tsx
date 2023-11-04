@@ -1,10 +1,14 @@
-import { StyleSheet, Text, View } from "react-native";
+import { View, Text, StyleSheet } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
+
+import HeightSpacer from "../component/HeightSpacer";
+import Styles from "../component/reusable.style";
 
 const Notification = () => {
   return (
     <SafeAreaView>
-      <Text style={{ fontFamily: "Poppins-Bold", fontSize: 20 }}>Notification</Text>
+      <HeightSpacer height={20} />
+      <Text style={[Styles.container, Styles.heading1]}>Notification</Text>
     </SafeAreaView>
   );
 };

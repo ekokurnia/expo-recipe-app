@@ -2,11 +2,7 @@ import { StyleSheet, Text } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 const CreateRecipe = () => {
-  return (
-    <SafeAreaView>
-      <Text style={{ fontFamily: "Poppins-Bold", fontSize: 20 }}>Create New Recipe</Text>
-    </SafeAreaView>
-  );
+  return <SafeAreaView></SafeAreaView>;
 };
 
 export default CreateRecipe;

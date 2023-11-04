@@ -4,7 +4,7 @@ interface HeightSpacerProps {
   height: number;
 }
 const HeightSpacer: React.FC<HeightSpacerProps> = ({ height }) => {
-  return <View style={{ height: height }}></View>;
+  return <View style={{ marginTop: height }}></View>;
 };
 
 export default HeightSpacer;

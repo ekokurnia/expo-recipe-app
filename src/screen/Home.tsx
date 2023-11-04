@@ -15,17 +15,9 @@ const Home = () => {
     <SafeAreaView>
       <ScrollView showsVerticalScrollIndicator={false}>
         {/* Heading */}
-        <View style={Styles.container}>
-          <Text
-            style={{
-              fontFamily: "Poppins-Bold",
-              color: COLORS.neutral90,
-              fontSize: SIZES.xl,
-              lineHeight: 28,
-            }}
-          >
-            Find best recipes{"\n"}for cooking
-          </Text>
+        <HeightSpacer height={20} />
+        <View style={[Styles.container]}>
+          <Text style={Styles.heading1}>Find best recipes{"\n"}for cooking</Text>
           {/* Search Field */}
           <HeightSpacer height={28} />
           <SearchField />
